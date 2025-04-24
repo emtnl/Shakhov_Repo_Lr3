@@ -10,43 +10,51 @@ void calculateNewDate();
 void calculateDaysToNextYear();
 
 int main() {
-    cout << "Task 1: вывести текущий день" << endl;
-    cout << "Task 2: вывести текущий месяц" << endl;
-    cout << "Task 3: ввести текущий год" << endl;
-    cout << "Task 4: ввести количество дней для прибавления" << endl;
-    cout << "Task 5: вычислить новую дату после прибавления дней" << endl;
-    cout << "Task 6: найти разницу в днях между текущей датой и 1 января следующего года" << endl;
-
     int choice;
-    cout << "Выберите задачу (1-6): ";
-    cin >> choice;
 
-    switch (choice) {
-        case 1:
-            printCurrentDay();
-            break;
-        case 2:
-            printCurrentMonth();
-            break;
-        case 3:
-            inputCurrentYear();
-            break;
-        case 4:
-            inputDaysToAdd();
-            break;
-        case 5:
-            calculateNewDate();
-            break;
-        case 6:
-            calculateDaysToNextYear();
-            break;
-        default:
-            cout << "Неверный выбор!" << endl;
-    }
+    do {
+        // Вывод меню
+        cout << "\nМеню:\n";
+        cout << "1. Вывести текущий день\n";
+        cout << "2. Вывести текущий месяц\n";
+        cout << "3. Ввести текущий год\n";
+        cout << "4. Ввести количество дней для прибавления\n";
+        cout << "5. Вычислить новую дату после прибавления дней\n";
+        cout << "6. Найти разницу в днях до 1 января следующего года\n";
+        cout << "0. Выход\n";
+        cout << "Выберите пункт меню: ";
+        cin >> choice;
+
+        // Обработка выбора пользователя
+        switch (choice) {
+            case 1:
+                printCurrentDay();
+                break;
+            case 2:
+                printCurrentMonth();
+                break;
+            case 3:
+                inputCurrentYear();
+                break;
+            case 4:
+                inputDaysToAdd();
+                break;
+            case 5:
+                calculateNewDate();
+                break;
+            case 6:
+                calculateDaysToNextYear();
+                break;
+            case 0:
+                cout << "Выход из программы.\n";
+                break;
+            default:
+                cout << "Неверный выбор! Попробуйте снова.\n";
+        }
+    } while (choice != 0);
 
     return 0;
 }
-
 
 void printCurrentDay() {
     int day;
