@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// Объявления функций
+
 void printCurrentDay();
 void printCurrentMonth();
 void inputCurrentYear();
@@ -47,27 +47,29 @@ int main() {
     return 0;
 }
 
-// Определения функций (пока пустые)
+
 void printCurrentDay() {
-    // Реализация будет добавлена позже
+    int day;
+    cout << "Введите текущий день: ";
+    cin >> day;
+    cout << "Текущий день: " << day << endl;
 }
 
 void printCurrentMonth() {
-    // Реализация будет добавлена позже
+    
 }
 
 void inputCurrentYear() {
-    // Реализация будет добавлена позже
+    
 }
 
 void inputDaysToAdd() {
-    // Реализация будет добавлена позже
-}
+    
 
 void calculateNewDate() {
-    // Реализация будет добавлена позже
+    
 }
 
 void calculateDaysToNextYear() {
-    // Реализация будет добавлена позже
+    
 }
