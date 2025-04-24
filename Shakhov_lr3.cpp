@@ -5,7 +5,7 @@ using namespace std;
 void printCurrentDay();
 void printCurrentMonth();
 void inputCurrentYear();
-void inputDaysToAdd();
+int inputDaysToAdd();
 void calculateNewDate();
 void calculateDaysToNextYear();
 
@@ -69,13 +69,74 @@ void inputCurrentYear() {
     cout << "Текущий год: " << year << endl;
 }
 
-void inputDaysToAdd() {
+int inputDaysToAdd() {
+    int days;
+    cout << "Введите количество дней для прибавления: ";
+    cin >> days;
+    return days;
+}
     
 
 void calculateNewDate() {
-    
+    int day, month, year, daysToAdd;
+    cout << "Введите текущую дату (день месяц год): ";
+    cin >> day >> month >> year;
+    cout << "Введите количество дней для прибавления: ";
+    cin >> daysToAdd;
+
+    // Массив с количеством дней в каждом месяце (для обычного года)
+    int daysInMonth[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+
+    // Проверка на високосный год
+    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+        daysInMonth[1] = 29; // Февраль имеет 29 дней в високосном году
+    }
+
+    // Прибавляем дни
+    day += daysToAdd;
+    while (day > daysInMonth[month - 1]) {
+        day -= daysInMonth[month - 1];
+        month++;
+        if (month > 12) {
+            month = 1;
+            year++;
+            // Обновляем массив дней в месяце для нового года
+            if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+                daysInMonth[1] = 29;
+            } else {
+                daysInMonth[1] = 28;
+            }
+        }
+    }
+
+    // Вывод новой даты
+    cout << "Новая дата: " << day << "." << month << "." << year << endl;
 }
 
 void calculateDaysToNextYear() {
-    
+    int day, month, year;
+    cout << "Введите текущую дату (день месяц год): ";
+    cin >> day >> month >> year;
+
+    // Массив с количеством дней в каждом месяце (для обычного года)
+    int daysInMonth[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+
+    // Проверка на високосный год
+    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+        daysInMonth[1] = 29; // Февраль имеет 29 дней в високосном году
+    }
+
+    // Вычисляем оставшиеся дни в текущем году
+    int daysLeft = 0;
+
+    // Добавляем оставшиеся дни в текущем месяце
+    daysLeft += daysInMonth[month - 1] - day;
+
+    // Добавляем дни из оставшихся месяцев
+    for (int i = month; i < 12; i++) {
+        daysLeft += daysInMonth[i];
+    }
+
+    // Выводим результат
+    cout << "Количество дней до 1 января следующего года: " << daysLeft + 1 << endl;
 }
