@@ -1,0 +1,35 @@
+[33mcommit 0b92b9420e45a96611e4c44de0f216cfe44421b4[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: emtnl <shakhov.vladimir.s@gmail.com>
+Date:   Fri Apr 25 00:08:41 2025 +0300
+
+    calculateDaysToNextYear, calculateNewDate, inputDaysToAdd
+
+[33mcommit d84442abef891d5cc406b17686f6fc1ab5b847b0[m
+Author: emtnl <shakhov.vladimir.s@gmail.com>
+Date:   Fri Apr 25 00:03:53 2025 +0300
+
+    inputCurrentYear
+
+[33mcommit 2ee607fb751222744927f04a8e6c46086ef9b625[m
+Author: emtnl <shakhov.vladimir.s@gmail.com>
+Date:   Fri Apr 25 00:02:18 2025 +0300
+
+    printCurrentMonth
+
+[33mcommit b3d6f29cbcaad07d52087719c644a816b8a495fb[m
+Author: emtnl <shakhov.vladimir.s@gmail.com>
+Date:   Thu Apr 24 23:14:37 2025 +0300
+
+    Func PrintCurrentday
+
+[33mcommit 48efdcb97ef9b0b138f037c4df20ac55a6f84bcc[m
+Author: emtnl <shakhov.vladimir.s@gmail.com>
+Date:   Thu Apr 24 23:11:52 2025 +0300
+
+    void
+
+[33mcommit 2c9646b097926fbfb16e4444a0b445c6e4ef23e2[m
+Author: emtnl <shakhov.vladimir.s@gmail.com>
+Date:   Thu Apr 24 22:29:37 2025 +0300
+
+    proja
