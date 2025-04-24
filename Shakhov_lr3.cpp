@@ -63,7 +63,10 @@ void printCurrentMonth() {
 }
 
 void inputCurrentYear() {
-    
+    int year;
+    cout << "Введите текущий год: ";
+    cin >> year;
+    cout << "Текущий год: " << year << endl;
 }
 
 void inputDaysToAdd() {
